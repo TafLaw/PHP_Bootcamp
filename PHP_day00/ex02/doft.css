@@ -1,0 +1,143 @@
+.topBar {
+    width: 70vw;
+    background-color: rgb(144, 145, 146);
+    height: 100px;
+    border: 1px solid rgb(144, 145, 146);
+    border-radius: 6px;
+    margin: 20px auto 0px auto;
+    padding: 4px;
+    box-shadow: 10px 10px 13px rgba(7, 1, 1, 0.952);
+    }
+    .image {
+        width: 20vw;
+        height: 8vh;
+        margin-top: 30px;
+        margin-bottom: -90px;
+    }
+    .image2 {
+        width: 10vw;
+        height: 12vh;
+        margin-left: 83.2%;
+    }
+    .loupe {
+        margin-bottom: -45px;
+        margin-top: 10px;
+    }
+    .small {
+        width: 1.1vw;
+        height: 1.3vh;
+    }
+    .r_image {
+        margin-bottom: -40px;
+        margin-left: 97.7%;
+    }
+    .close {
+        
+        margin-left: 85%;
+    }
+    .blocks {
+        display: flex;
+        margin-left: 16%;
+    }
+    .block {
+        float: left;
+        border: 3px solid red;
+    }
+    #left_block {
+        width: 7vw;
+        background-color: rgb(144, 145, 146);
+        height: 45vh;
+        border: 1px solid rgb(144, 145, 146);
+        border-radius: 6px;
+        margin: 20px 28px 0px -8px;
+        padding: 4px;
+        box-shadow: 10px 10px 13px rgba(7, 1, 1, 0.952);
+
+    }
+    #arrow {
+        width: 4.8vw;
+        height: 8vh;
+        margin: 9px 17px;
+    }
+    #main {
+        width: 4.8vw;
+        height: 8vh;
+        margin: 0px 17px;
+    }
+    #oeil {
+        width: 4.8vw;
+        height: 8vh;
+        margin: 0px 17px;
+        border: 5px solid red;
+        border-radius: 10%;
+    }
+    #outil {
+        width: 4.8vw;
+        height: 8vh;
+        margin: 0px 17px;
+    }
+    #chat-icon {
+        width: 4.8vw;
+        height: 8vh;
+        margin: 0px 17px;
+    }
+    .cluster {
+        width: 50vw;
+        background-color: rgb(144, 145, 146);
+        height: 60vh;
+        border: 1px solid rgb(144, 145, 146);
+        border-radius: 6px;
+        margin: 20px auto 0px auto;
+        padding: 4px;
+        padding-right: 7px;
+        box-shadow: 10px 10px 13px rgba(7, 1, 1, 0.952);
+    }
+    .cluster_img {
+        width: 49.63vw;
+        height: 59.2vh;
+        margin-top: 4px;
+        margin-left: 4px;
+    }
+    #right_block {
+        width: 7vw;
+        background-color: rgb(144, 145, 146);
+        height: 45vh;
+        border: 1px solid rgb(144, 145, 146);
+        border-radius: 6px;
+        margin: 20px 30% 0px 28px;
+        padding: 4px;
+        box-shadow: 10px 10px 13px rgba(7, 1, 1, 0.952);
+    }
+    #book {
+        width: 5vw;
+        height: 13vh;
+        margin: 10px 17px;
+    }
+    #towel {
+        width: 5vw;
+        height: 9vh;
+        margin: 0px 17px;
+    }
+    #brick {
+        width: 5vw;
+        height: 9vh;
+        margin: 0px 17px;
+    }
+    #corner_block {
+        width: 25vw;
+        background-color: rgb(157, 250, 128);
+        height: 17vh;
+        border: 1px solid rgb(157, 250, 128);
+        border-radius: 7px;
+        margin: -90px 0px 0px 12.4%;
+        padding: 4px;
+        position: relative;
+        box-shadow: 10px 10px 13px rgba(7, 1, 1, 0.952);;
+    }
+    .input1 {
+        width: 80%;
+        height: 10%;
+        margin-left: 5px;
+        border: 1px solid gray;
+        box-shadow: inset 1px 1px 3px rgb(43, 39, 39);
+    }
