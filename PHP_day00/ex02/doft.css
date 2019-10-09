@@ -1,3 +1,6 @@
+* {
+    box-sizing: border-box;
+  }
 .topBar {
     width: 70vw;
     background-color: rgb(144, 145, 146);
@@ -57,29 +60,29 @@
     #arrow {
         width: 4.8vw;
         height: 8vh;
-        margin: 9px 17px;
+        margin: 9px 3%;
     }
     #main {
         width: 4.8vw;
         height: 8vh;
-        margin: 0px 17px;
+        margin: 0px 3%;
     }
     #oeil {
         width: 4.8vw;
         height: 8vh;
-        margin: 0px 17px;
+        margin: 0px 3%;
         border: 5px solid red;
         border-radius: 10%;
     }
     #outil {
         width: 4.8vw;
         height: 8vh;
-        margin: 0px 17px;
+        margin: 0px 3%;
     }
     #chat-icon {
         width: 4.8vw;
         height: 8vh;
-        margin: 0px 17px;
+        margin: 0px 6.5%;
     }
     .cluster {
         width: 50vw;
@@ -119,9 +122,10 @@
         margin: 0px 17px;
     }
     #brick {
-        width: 5vw;
-        height: 9vh;
-        margin: 0px 17px;
+        height: 70px;
+  width: 120px;
+  background-image: url(resources/brick.jpg);
+  background-repeat: repeat;
     }
     #corner_block {
         width: 25vw;
