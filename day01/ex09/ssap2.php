@@ -1,11 +1,14 @@
 #!/usr/bin/php
 <?php 
-   
    function ssap2($ac, $av)
    {
        $arr = array();
+       $letters = array();
+       $digits = array();
+       $other = array();
        $j = 0;
        $i = 1;
+       $k = 0;
 
        while ($i < $ac)
        {
@@ -14,8 +17,25 @@
                 $arr[$j++] = $value;
             $i++;
        }
-       natcasesort($arr);
+       $j = 0;
+       $i = 0;
        foreach($arr as $value)
+       {
+            if (ctype_alpha($value))
+                $alpha[$j++] = $value;
+            else if (ctype_digit($value))
+                $digits[$i++] = $value;
+            else
+                $other[$k++] = $value;
+       }
+       natcasesort($alpha);
+       krsort($digits);
+       sort($other);
+       foreach($alpha as $value)
+            echo "$value\n";
+       foreach($digits as $value)
+            echo "$value\n";
+       foreach($other as $value)
             echo "$value\n";
    }
    ssap2($argc, $argv); 
