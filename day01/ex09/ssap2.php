@@ -1,5 +1,5 @@
 #!/usr/bin/php
-<?php 
+<?php
    function ssap2($ac, $av)
    {
        $arr = array();
@@ -21,10 +21,10 @@
        $i = 0;
        foreach($arr as $value)
        {
-            if (ctype_alpha($value))
+            if (is_numeric($value))
+               $digits[$i++] = $value;
+            else if (ctype_alpha($value) || ctype_alnum($value))
                 $alpha[$j++] = $value;
-            else if (ctype_digit($value))
-                $digits[$i++] = $value;
             else
                 $other[$k++] = $value;
        }
@@ -38,5 +38,6 @@
        foreach($other as $value)
             echo "$value\n";
    }
-   ssap2($argc, $argv); 
+   if ($argc > 1)
+        ssap2($argc, $argv); 
 ?>
