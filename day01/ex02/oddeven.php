@@ -21,9 +21,9 @@
             if (is_numeric($x))
                 oddeven($x);
             else if (ctype_alpha($x))
-                echo "$x is not a number\n";
+                echo "'$x' is not a number\n";
             else
-                echo "$x is not a number\n";
+                echo "'$x' is not a number\n";
         }
     }
     operate();
