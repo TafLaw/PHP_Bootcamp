@@ -18,6 +18,5 @@
             $i++;
         }
         sort($newArray);
-        print_r ($newArray);
     }
 ?>
