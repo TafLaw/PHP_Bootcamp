@@ -8,12 +8,18 @@
 ?>
 <html>
     <body>
-        <form method="GET">
-            <p>Username</p><br/>
-            <input type="text" name="login" placeholder="username">
-            <p>Password</p><br/>
-            <input type="text" name="passwd" placeholder="password"><br/>
-            <input type="submit" name="submit" value="OK">
+        <form method="GET" value=".">
+            Username: <input type="text" name="login" placeholder="username" value="
+            <?php
+                if ($_SESSION['login']);
+                    echo $_SESSION['login'];
+            ?>" /><br />
+            Password:   <input type="password" name="passwd" placeholder="password" style="margin-top: 6px;" value="
+            <?php
+                if ($_SESSION['passwd']);
+                    echo $_SESSION['passwd'];
+            ?>" /><br />
+            <input type="submit" name="submit" value="OK" />
         </form>
     </body>
 </html>
