@@ -1,0 +1,33 @@
+<?php
+if($_GET["submit"] == "add to cart")
+    {
+        echo "Cart page";
+        return;
+    }
+    session_start();
+    $connect = mysqli_connect("localhost", "root", "", "e-commerse_Shop");
+?>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MobiStyle</title>
+        <style>
+            td, th {
+                border: 1px solid #dddddd;
+                text-align: left;
+                padding: 8px;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>Your Basket</h3>
+        <table class="main-table">
+            <tr>
+                <th width="40%">Item</th>
+                <th width="20%">Quantity</th>
+                <th width="10%">Price</th>
+                <th width="5%">Total</th>
+            </tr>
+        </table>
+    </body>
+</html>
