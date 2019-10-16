@@ -44,49 +44,67 @@ if(isset($_GET["action"]))
 			if($values["product_id"] == $_GET["id"])
 			{
 				unset($_SESSION["cart"][$keys]);
-                echo '<form action="product.php"><input type="submit" name="submit" value="back"></form>';
-				/* echo '<script>window.location="product.php"</script>'; */
 			}
 		}
     }
-}
-if (isset($_GET["view"]))
-{
-    if ($_GET["view"] == "go to cart")
-        echo '<script>window.location="cart.php"</script>';
 }
 ?>
 <!DOCTYPE html>
 <html>
     <head>
         <title>Rush00</title>
+        <style>
+            .details {
+                background-color: blue;
+                width: 40%;
+                
+            }
+            .main {
+                display: flex;
+            }
+            .block {
+                margin-left: 16%;
+                float: left;
+            }
+        </style>
     </head>
     <body>
     <div style="border: 2px solid black;">
     <h2>Your Orders</h2>
     <div class="prod-block">
     <?php
+    $query = "SELECT * FROM products ORDER BY id ASC";
+    $result = mysqli_query($connect, $query);
+    $row = mysqli_fetch_array($result);
 	if(!empty($_SESSION["cart"]))
 	{
 		$total = 0;
 		foreach($_SESSION["cart"] as $keys => $values)
 		{
-			?>
-            <?php echo $values["item_name"]; ?>
-            <?php echo $values["item_quantity"] ?>
+            ?>
+            <div class="main">
+            <div class="details">
+             <img src="<?php echo $row["image"]; ?>" alt="samsung" width="10%" height="10%">
+            <span style="float:right"><?php echo $values["item_name"]; ?><span><br />
+            <p style="float: right">QTY: 
+            <span style="border: 1px solid gray;"><?php echo $values["item_quantity"] ?></span><p>
+            </div>
+            <div class="block">
             <p>R <?php echo $values["product_price"]; ?></p>
             <p>R <?php echo number_format($values["item_quantity"] * $values["product_price"], 2); ?></p>
             <a href="cart.php?action=delete&id=<?php echo $values["product_id"]; ?>"><span>remove</span></a>
             <?php 
-			$total = $total + ($values["item_quantity"] * $values["product_price"]);
+            $total = $total + ($values["item_quantity"] * $values["product_price"]);
+            
 		}
 		?>
         <p>Total</p>
         R <?php echo number_format($total, 2); ?>
         <?php
 	}
-	?>
+	?></div></div>
     </div>
     </div>
+    <form action="product.php"><button type="submit">back</button></form>
     </body>
 <html>

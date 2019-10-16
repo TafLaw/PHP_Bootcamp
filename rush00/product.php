@@ -21,14 +21,14 @@ $connect = mysqli_connect("localhost", "root", "", "Rush00");
             <div style="width: 40%; box-shadow: 4px 4px 22px gray;">
             <form method="post" action="cart.php?action=add&id=<?php echo $row["id"]; ?>">
             <div style="padding:10px;" align="center">
-            <img src="<?php echo $row["image"]; ?>" class="img-responsive" alt="samsung" width="80%" height="80%">
+            <img src="<?php echo $row["image"]; ?>" alt="samsung" width="80%" height="80%">
             <h5><?php echo $row["p_name"]; ?></h5>
             <h5>R <?php echo $row["price"]; ?></h5>
             <input type="text" name="quantity" class="form-control" value="1" style="width: 60%">
             <input type="hidden" name="hidden_name" value="<?php echo $row["p_name"]; ?>">
             <input type="hidden" name="hidden_price" value="<?php echo $row["price"]; ?>">
             <input type="submit" name="add" style="margin-top:5px;" class="btn btn-default" value="Add to Cart">
-            <input type="submit" name="view" style="margin-top:5px" value="go to cart">
+            <button type="submit" formaction="cart.php">Go to cart</button>
             </div>
             </form>
             </div>
